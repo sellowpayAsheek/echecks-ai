@@ -15,8 +15,8 @@
         "guzzlehttp/guzzle": "^7.3"
     },
     "autoload": {
-        "psr-0": {
-            "ocw": "src/"
+        "psr-4": {
+            "Ocw\\Echeck\\": "src"
         }
     },
     "require-dev": {
@@ -31,3 +31,5 @@
         }
     }
 }
+
+
