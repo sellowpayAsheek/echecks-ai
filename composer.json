@@ -1,0 +1,33 @@
+{
+    "name": "ocw/echecks-ai-php",
+    "type": "library",
+    "description": "echecks-ai API PHP wrapper.",
+    "keywords": ["ocw", "printing", "api", "rest", "web service", "wrapper","e-checks"],
+    "homepage": "https://www.echecks.ai/",
+    "license": "MIT",
+    "authors": [{
+        "name": "ocw",
+        "email": "support@onlinecheckwriter.com",
+        "homepage": "https://onlinecheckwriter.com"
+    }],
+    "require": {
+        "php": ">=7.4.0",
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "ocw": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.*",
+        "satooshi/php-coveralls": "2.*||1.*",
+        "dompdf/dompdf": "0.6.* || 1.2.*"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
