@@ -1,16 +1,52 @@
 <?php
 
-namespace Echeck;
+namespace Ocw\Echeck;
+
+use InvalidArgumentException;
+use Ocw\Echeck\Exceptions\EcheckTokenException;
+use Ocw\Echeck\Resources\Connector;
 
 class Echeck
 {
-    public function __construct()
+    private static $token;
+    private static $enviroment;
+
+    public function __construct($token = null,$enviroment = "LIVE")
     {
-        var_dump("asdas");
+        if($token === null){
+            if(self::$token === null){
+                $msg = 'No token Provided. Please provide token globally or use Echeck::setToken' ;
+                throw new EcheckTokenException($msg);
+            }
+        }else{
+            self::validateToken($token);
+            self::$token = $token ;
+        }
+
+        self::setEnviroment($enviroment);
+        $this->connector = new Connector(self::$token,self::$enviroment);
     }
 
-    public function index()
+    public static function setToken($token)
     {
-        var_dump(['id' => "asdasdas"]);
+        self::validateToken($token);
+        self::$token = $token ;
+    }
+
+    private static function validateToken($token)
+    {
+        if (!is_string($token) || strlen($token) < 10) {
+            throw new \InvalidArgumentException('Invalid Token');
+        }
+
+        return true;
+    }
+    
+    public static function setEnviroment($enviroment = "LIVE")
+    {
+        if(empty(self::$enviroment)){
+            self::$enviroment = $enviroment ;
+        }
+
     }
 }
