@@ -10,6 +10,7 @@ class Echeck
 {
     private static $token;
     private static $enviroment;
+    private $connector;
 
     public function __construct($token = null,$enviroment = "LIVE")
     {
@@ -48,5 +49,41 @@ class Echeck
             self::$enviroment = $enviroment ;
         }
 
+    }
+
+    public function mailAcheck(array $data): array
+    {
+        return $this->connector->sendRequest('post','checkmail',$data);
+    }
+
+    public function emailAcheck(array $data): array
+    {
+        return $this->connector->sendRequest('post','checkemail',$data);
+    }
+
+    public function resendemailCheck(string $id): array
+    {
+        return $this->connector->sendRequest('post','checkemail/'.$id.'/resend');
+    }
+
+
+    public function viewCheckPdf(string $id): array
+    {
+        return $this->connector->sendRequest("get",'check/'.$id.'/view');
+    }
+
+    public function voidCheck(string $id): array
+    {
+        return $this->connector->sendRequest("get",'check/'.$id.'/void');
+    }
+
+    public function viewCheckStatement(string $id): array
+    {
+        return $this->connector->sendRequest("get",'check/'.$id.'/statement');
+    }
+
+    public function viewCheckDetails(string $id): array
+    {
+        return $this->connector->sendRequest("get",'check/'.$id.'/details');
     }
 }
