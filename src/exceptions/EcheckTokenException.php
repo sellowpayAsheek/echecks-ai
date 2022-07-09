@@ -4,7 +4,5 @@ namespace Ocw\Echeck\Exceptions;
 
 use Exception;
 
-class EcheckTokenException extends Exception
-{
+class EcheckTokenException extends Exception{}
 
-}
