@@ -10,6 +10,7 @@ class Echeck
 {
     private static $token;
     private static $enviroment;
+    private $connector;
 
     public function __construct($token = null,$enviroment = "LIVE")
     {
@@ -48,5 +49,10 @@ class Echeck
             self::$enviroment = $enviroment ;
         }
 
+    }
+
+    public function mailAcheck(array $data): array
+    {
+        return $this->connector->sendRequest('post','check/mail',$data);
     }
 }
