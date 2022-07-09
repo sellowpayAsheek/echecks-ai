@@ -25,7 +25,7 @@ class Connector
             $this->baseUrl = 'https://app.onlinecheckwriter.com/api/v2' ;
         }
 
-        $this->client =  new Client(["base_uri" => $this->baseUrl]);
+        $this->client =  new Client(["base_uri" => $this->baseUrl, 'timeout' => 300]);
     }
 
     public function sendRequest($method,$uri,$query = [] , $body = null,$headers = null)
@@ -56,6 +56,7 @@ class Connector
 
         $options = array(
             'headers' => array(
+                "Content-Type" => "application/json" ,
                 "Accept" => "application/json; charset=utf-8" ,
                 "Authorization" => $this->getAuthToken()
             )
