@@ -12,17 +12,17 @@
     }],
     "require": {
         "php": ">=7.4.0",
-        "guzzlehttp/guzzle": "^7.3"
+        "guzzlehttp/guzzle": "7.4.5"
     },
     "autoload": {
         "psr-4": {
-            "Echeck": "src/"
+            "Echeck\\": "src"
         }
     },
     "require-dev": {
         "phpunit/phpunit": "9.5.*",
         "satooshi/php-coveralls": "2.*||1.*",
-        "dompdf/dompdf": "0.6.* || 1.2.*"
+        "dompdf/dompdf": "2.0.0"
     },
     "minimum-stability": "dev",
     "extra": {
