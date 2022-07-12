@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ocw\\Echeck\\": "src"
+            "Echeck": "src/"
         }
     },
     "require-dev": {

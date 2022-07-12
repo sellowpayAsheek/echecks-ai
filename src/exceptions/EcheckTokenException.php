@@ -1,10 +1,8 @@
 <?php
 
-namespace Ocw\Echeck\Exceptions;
+namespace Echeck\Exceptions;
 
 use Exception;
 
-class EcheckTokenException extends Exception
-{
+class EcheckTokenException extends Exception{}
 
-}

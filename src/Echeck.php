@@ -1,10 +1,11 @@
 <?php
 
-namespace Ocw\Echeck;
+namespace Echeck;
 
+use Echeck\Exceptions\EcheckTokenException;
+use Echeck\Resources\Connector;
 use InvalidArgumentException;
-use Ocw\Echeck\Exceptions\EcheckTokenException;
-use Ocw\Echeck\Resources\Connector;
+
 
 class Echeck
 {
@@ -37,7 +38,7 @@ class Echeck
     private static function validateToken($token)
     {
         if (!is_string($token) || strlen($token) < 10) {
-            throw new \InvalidArgumentException('Invalid Token');
+            throw new InvalidArgumentException('Invalid Token');
         }
 
         return true;
