@@ -1,11 +1,12 @@
 <?php
 
-namespace Ocw\Echeck\Resources;
+namespace Echeck\Resources;
 
+use Echeck\Exceptions\NetworkErrorException;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Client\ConnectionException;
-use Ocw\Echeck\Exceptions\NetworkErrorException;
+
 
 class Connector
 {
