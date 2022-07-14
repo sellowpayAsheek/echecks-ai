@@ -9,7 +9,8 @@ use GuzzleHttp\Exception\ConnectException;
 
 
 class Connector
-{
+{   
+    const IDEMPOTENTKEY = 'idmepotency-key' ;
     protected $token;
     protected $enviroment;
     protected $baseUrl ;
@@ -69,6 +70,11 @@ class Connector
 
         if($body){
             $options['body'] = json_encode($body);
+        }
+
+        if(isset($body['UniqId'])){
+            $options['headers'][self::IDEMPOTENTKEY] = $body['UniqId'];
+            unset($body['UniqId']);
         }
 
         return $options ;
