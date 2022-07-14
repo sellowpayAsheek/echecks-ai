@@ -22,7 +22,8 @@ $send_echeck = $echeck->emailAcheck([
     "Zip"           => "75703" ,
     "Country"       => "US" ,
     "BankAccountId" =>  "e4b7f0de-ab64-4575-9a43-sadas4565444"   ,                                                
-    "EmailAddress"  => "test@gmail.com" 
+    "EmailAddress"  => "test@gmail.com" ,
+    "UniqId"        => "uniqueId"
 ]);
 
 $send_echeck_with_stub = $echeck->emailAcheck([
