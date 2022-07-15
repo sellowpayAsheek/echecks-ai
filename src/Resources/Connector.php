@@ -22,9 +22,9 @@ class Connector
         $this->enviroment = $enviroment ;
 
         if($this->enviroment == "SANDBOX"){
-            $this->baseUrl = "https://staging.echecks.sebipay.com/api/v4" ;
+            $this->baseUrl = "https://staging.echecks.sebipay.com/api/v4/" ;
         }else{
-            $this->baseUrl = 'https://app.onlinecheckwriter.com/api/v2' ;
+            $this->baseUrl = 'https://app.onlinecheckwriter.com/api/v2/' ;
         }
 
         $this->client =  new Client(["base_uri" => $this->baseUrl, 'timeout' => 300]);
