@@ -30,7 +30,7 @@ class Connector
         $this->client =  new Client(["base_uri" => $this->baseUrl, 'timeout' => 300]);
     }
 
-    public function sendRequest($method,$uri,$query = [] , $body = null,$headers = null)
+    public function sendRequest($method,$uri,$body = null,$headers = null)
     {
         $options = $this->getOptions($body,$headers);
         try {
