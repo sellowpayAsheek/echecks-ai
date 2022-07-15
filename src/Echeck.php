@@ -87,4 +87,9 @@ class Echeck
     {
         return $this->connector->sendRequest("get",'check/'.$id.'/details');
     }
+
+    public function retrieveBankAccounts(): array
+    {
+        return $this->connector->sendRequest("get",'bank-accounts');
+    }
 }
