@@ -30,8 +30,9 @@ class Connector
         $this->client =  new Client(["base_uri" => $this->baseUrl, 'timeout' => 300]);
     }
 
-    public function sendRequest($method,$uri,$body = null,$headers = null)
-    {
+    public function sendRequest($method,$uri,$body = null,$headers = null,$query=[])
+    {   
+        $uri = $this->validateUri($uri,$query);
         $options = $this->getOptions($body,$headers);
         try {
             $response = $this->client->request($method,$uri,$options);
@@ -97,5 +98,14 @@ class Connector
         }
 
         return 'An Internal Error has occurred';
+    }
+
+    protected function validateUri($uri,$search_parameters)
+    {
+        if(!empty($search_parameters) && is_array($search_parameters)){
+            $query =  http_build_query($search_parameters);
+            return $uri."?".$query ;
+        }
+        return $uri ;
     }
 }
