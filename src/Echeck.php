@@ -75,7 +75,7 @@ class Echeck
 
     public function voidCheck(string $id): array
     {
-        return $this->connector->sendRequest("get",'check/'.$id.'/void');
+        return $this->connector->sendRequest("post",'check/'.$id.'/void');
     }
 
     public function viewCheckStatement(string $id): array
@@ -93,7 +93,7 @@ class Echeck
         return $this->connector->sendRequest("get",'bank-accounts');
     }
 
-    public function getCheckList(array $search_parameters): array
+    public function getCheckList(array $search_parameters = []): array
     {
         return $this->connector->sendRequest('get','check',null,null,$search_parameters);
     }
