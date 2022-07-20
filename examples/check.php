@@ -13,3 +13,7 @@ $void_a_check = $echeck->voidCheck("<checkId>");
 $check_statements = $echeck->viewCheckStatement("<checkId>");
 
 $check_details = $echeck->viewCheckDetails("<checkId>");
+
+$all_checks = $echeck->getCheckList([
+    "checkId" => "<checkId>" 
+]);
