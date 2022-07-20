@@ -93,7 +93,7 @@ class Echeck
         return $this->connector->sendRequest("get",'bank-accounts');
     }
 
-    public function getCheckList(array $search_parameters): array
+    public function getCheckList(array $search_parameters = []): array
     {
         return $this->connector->sendRequest('get','check',null,null,$search_parameters);
     }
