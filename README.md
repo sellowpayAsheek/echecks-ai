@@ -15,14 +15,14 @@ composer require ocw/echecks-ai-php
 A simple mailing a check example.
 
 ```
-$echecks = new Echeck(getenv('ECHECKS_API_KEY'),getenv('ENVIROMENT')); <br />
+$echecks = new Echeck(getenv('ECHECKS_API_KEY'),getenv('ENVIROMENT')); 
 
 # Alternate Way
 \Echeck\Echeck::setToken(getenv('ECHECKS_API_KEY'));  
 \Echeck\Echeck::setEnviroment(getenv('ENVIROMENT')); 
-#echecks = new Echeck(); 
+$echecks = new Echeck(); 
 
-$check_mail = $echeck->mailAcheck([
+$check_mail = $echecks->mailAcheck([
     "PayeeName"     => "Jhon doe" ,
     "PayorName"     => "Green Holding" ,
     "AccountNumber" => "123456789" ,
