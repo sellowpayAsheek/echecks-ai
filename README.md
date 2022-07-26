@@ -5,7 +5,7 @@ Echecks-ai is organized around REST API.Our API can be used to mail or email a c
 For more information contact support@onlinecheckwriter.com
 
 # Installation & Usage
-**Requirements**
-PHP 7.4 and later.
-**Composer**
-To install via [composer](https://getcomposer.org/),composer require ocw/echecks-ai-php
+**Requirements** <br />
+  PHP 7.4 and later. <br />
+**Composer** <br />
+  To install via [composer](https://getcomposer.org/),composer require ocw/echecks-ai-php
