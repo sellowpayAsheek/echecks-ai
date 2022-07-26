@@ -6,6 +6,12 @@ For more information contact support@onlinecheckwriter.com
 
 # Installation & Usage
 **Requirements** <br />
-  PHP 7.4 and later. <br />
+  PHP 7.4 and later. <br /> <br />
+  
 **Composer** <br />
-  To install via [composer](https://getcomposer.org/),composer require ocw/echecks-ai-php
+  To install via [composer](https://getcomposer.org/), <br /> 
+  composer require ocw/echecks-ai-php <br /> <br />
+  
+  # Getting Started
+  
+  
