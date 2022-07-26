@@ -18,9 +18,9 @@ A simple mailing a check example.
 $echecks = new Echeck(getenv('ECHECKS_API_KEY'),getenv('ENVIROMENT')); <br />
 
 # Alternate Way
-\Echeck\Echeck::setToken(getenv('ECHECKS_API_KEY'));  <br />
-\Echeck\Echeck::setEnviroment(getenv('ENVIROMENT')); <br />
-#echecks = new Echeck(); <br />
+\Echeck\Echeck::setToken(getenv('ECHECKS_API_KEY'));  
+\Echeck\Echeck::setEnviroment(getenv('ENVIROMENT')); 
+#echecks = new Echeck(); 
 
 $check_mail = $echeck->mailAcheck([
     "PayeeName"     => "Jhon doe" ,
@@ -42,4 +42,7 @@ $check_mail = $echeck->mailAcheck([
 echo $check_mail;
 
 ```
+
+# Documentation
+API Documentation can be found [here](https://documenter.getpostman.com/view/18604937/UzXKWz15)
 
