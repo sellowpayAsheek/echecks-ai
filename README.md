@@ -1,20 +1,17 @@
-# echecks-ai php Client
+# echecks-ai PHP Client Library
 
-Echecks-ai is organized around REST API.Our API can be used to mail or email a check which is predictable and uses HTTP response codes to indicate any errors.
+Echecks-ai, the simple solution for check mailing and check e-mailing (e-check).<br />
+To signup for an account please contact support@onlinecheckwriter.com.
 
 For more information contact support@onlinecheckwriter.com
 
-# Installation & Usage
+# Installation 
 **Requirements** <br />
   PHP 7.4 and later. <br /> 
   
-**Composer** <br />
-  To install via [composer](https://getcomposer.org/), <br /> 
-  composer require ocw/echecks-ai-php <br /> <br />
-  
-  # Getting Started
-  ```
-  Echeck::setToken('EiZNSqeKYpMcIZbEn3KFLDyNGKtMa7b6orEKro013a7v9TFZ6KYiOmL6QWM7');     
-  Echeck::setEnviroment("SANDBOX");
-  $echeck = new Echeck();
-  ```
+```
+# Install via Composer
+composer require ocw/echecks-ai-php
+``` 
+# Usage
+
