@@ -1,9 +1,7 @@
 # echecks-ai PHP Client Library
 
-Echecks-ai, the simple solution for check mailing and check e-mailing (e-check).<br />
-To signup for an account please contact support@onlinecheckwriter.com.
+Echecks-ai, the simple solution for check mailing and check e-mailing (e-check). To signup for an account please contact support@onlinecheckwriter.com.
 
-For more information contact support@onlinecheckwriter.com
 
 # Installation 
 **Requirements** <br />
@@ -14,4 +12,34 @@ For more information contact support@onlinecheckwriter.com
 composer require ocw/echecks-ai-php
 ``` 
 # Usage
+A simple mailing a check example.
+
+```
+$echecks = new Echeck(getenv('ECHECKS_API_KEY'),getenv('ENVIROMENT')); <br />
+
+# Alternate Way
+\Echeck\Echeck::setToken(getenv('ECHECKS_API_KEY'));  <br />
+\Echeck\Echeck::setEnviroment(getenv('ENVIROMENT')); <br />
+#echecks = new Echeck(); <br />
+
+$check_mail = $echeck->mailAcheck([
+    "PayeeName"     => "Jhon doe" ,
+    "PayorName"     => "Green Holding" ,
+    "AccountNumber" => "123456789" ,
+    "Amount"        => 100.00 ,
+    "CheckNumber"   => "" ,
+    "Memo"          => "Created using echecks php client library" ,
+    "Address1"      => "5007 richmond rd" ,
+    "Address2"      => "" ,
+    "City"          => "Tyler" ,
+    "State"         => "TX" ,
+    "Zip"           => "75703" ,
+    "Country"       => "US" ,
+    "BankAccountId" =>  "e4b7f0de-ab64-4575-9a43-asd54874532"   ,                                              
+    "MailType"      => 1
+])
+
+echo $check_mail;
+
+```
 
