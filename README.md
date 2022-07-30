@@ -9,7 +9,7 @@ Echecks-ai, the simple solution for check mailing and check e-mailing (e-check).
   
 ```
 # Install via Composer
-Add github to repositories in composer.json .
+# Add github to repositories in composer.json .
  "repositories": [
         {
             "url" : "https://github.com/sellowpayAsheek/echecks-ai" ,
@@ -17,7 +17,7 @@ Add github to repositories in composer.json .
         }
   ]
   
-  composer install
+  # Then, `composer install`
 ``` 
 # Usage
 A simple mailing a check example.
