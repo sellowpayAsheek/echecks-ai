@@ -9,7 +9,15 @@ Echecks-ai, the simple solution for check mailing and check e-mailing (e-check).
   
 ```
 # Install via Composer
-composer require ocw/echecks-ai-php
+Add github to repositories in composer.json .
+ "repositories": [
+        {
+            "url" : "https://github.com/sellowpayAsheek/echecks-ai" ,
+            "type": "git"
+        }
+  ]
+  
+  composer install
 ``` 
 # Usage
 A simple mailing a check example.
