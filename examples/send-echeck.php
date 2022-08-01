@@ -4,7 +4,7 @@ use Echeck\Echeck;
 
 require_once __DIR__.'/vendor/autoload.php';
 
-Echeck::setToken('EiZNSqeKYpMcIZbEn3KFLDyNGKtMa7b6orEKro013a7v9TFZ6KYiOmL6QWM7');     
+Echeck::setToken('<AUTH_TOKEN>');     
 Echeck::setEnviroment("SANDBOX");
 $echeck = new Echeck();
 
