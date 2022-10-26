@@ -12,7 +12,8 @@
     }],
     "require": {
         "php": ">=7.4.0",
-        "guzzlehttp/guzzle": "7.4.5"
+        "guzzlehttp/guzzle": "7.4.5",
+        "symfony/var-dumper": "5.4.x-dev"
     },
     "autoload": {
         "psr-4": {
@@ -21,7 +22,6 @@
     },
     "require-dev": {
         "phpunit/phpunit": "9.5.*",
-        "satooshi/php-coveralls": "2.*||1.*",
         "dompdf/dompdf": "2.0.0"
     },
     "minimum-stability": "dev",
@@ -29,7 +29,9 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },"autoload-dev": {
+        "psr-4": {
+            "Echeck\\Tests\\" : "tests/Unit/"   
+        }
     }
 }
-
-
